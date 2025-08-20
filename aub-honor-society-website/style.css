@@ -231,3 +231,50 @@ footer {
     height: 23px;
     content: url('Images/linkedin-clicked.png');
 }
+
+#faqs h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#faqs details {
+    margin-bottom: 10px;
+}
+.faq-dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #440c0f;
+    height: 40px;
+    padding-left: 10px;
+    color: white;
+    padding-right: 20px;
+    border-left: 4px solid goldenrod;
+}
+
+.faq-dropdown::after {
+    content: "+";
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    right: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+details[open] .faq-dropdown::after {
+    content: "−"; 
+}
+
+.faq-full {
+    background-color: #821f21;
+    margin: 0px;
+    height: auto;
+    padding: 10px;
+    color: white;
+    border-left: 4px solid goldenrod;
+    text-align: center;
+    text-justify: center;
+}
