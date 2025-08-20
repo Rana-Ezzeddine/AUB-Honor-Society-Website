@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUB Honor Society</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
     <!--header-->
     <header>
+
         <div class="left-header">
-            <img src="logo.jpg" class="logo">
+            <img src="Images/logo.jpg" class="logo">
             <h1 class="site-title">AUB Honor Society</h1>
         </div>
         <nav>
-            <a href="#" class="nav-link" data-section="about">About</a>
-            <a href="#" class="nav-link" data-section="events">Events</a>
-            <a href="#" class="nav-link" data-section="podcast">Podcast</a>
-            <a href="#" class="nav-link" data-section="networking">Networking</a>
-            <a href="#" class="nav-link" data-section="merchandise">Merchandise</a>
-            <a href="#" class="nav-link" data-section="faqs">FAQs</a>
-            <a href="#" class="nav-link" data-section="contact">Contact</a>
+            <a class="tab-box" href="#" class="nav-link" data-section="about">About</a>
+            <a class="tab-box" href="#" class="nav-link" data-section="events">Events</a>
+            <a class="tab-box" href="#" class="nav-link" data-section="podcast">Podcast</a>
+            <a class="tab-box" href="#" class="nav-link" data-section="networking">Networking</a>
+            <a class="tab-box" href="#" class="nav-link" data-section="merchandise">Merchandise</a>
+            <a class="tab-box" href="#" class="nav-link" data-section="faqs">FAQs</a>
+            <!-- <a href="#" class="nav-link" data-section="contact">Contact</a> -->
         </nav>
     </header>
 
@@ -30,7 +32,7 @@
         <!--about-->
          <section id="about" class="tab-section">
     <div class="about-hero">
-        <img src="about-photo.jpg" alt="AUB Honor Society">
+        <img src="Images/about-photo.jpg" alt="AUB Honor Society">
         <h2 class="hero-title">About the Society</h2>
     </div>
 
@@ -89,7 +91,7 @@
         </section>
 
         <!-- Contact -->
-<section id="contact" class="tab-section">
+<!-- <section id="contact" class="tab-section">
     <h2>Contact Us</h2>
     <p><strong>Email:</strong> honorsociety@aub.edu.lb</p>
     <p><strong>Phone:</strong> +961 1 350000</p>
@@ -98,13 +100,30 @@
         <a href="https://www.instagram.com/aubhonorsociety" target="_blank">Instagram</a> | 
         <a href="https://www.facebook.com/aubhonorsociety" target="_blank">Facebook</a>
     </p>
-</section>
+</section> -->
 
     </main>
 
     <!--footer-->
-    <footer>
+    <footer id="foot">
         <p>© 2025 AUB Honor Society</p>
+        <div id="social"> 
+            <div class="social-link">
+                <a href="mailto:honorsociety@aub.edu.lb" target="_blank" id="email-link">
+                    <p>Email</p>
+                </a>
+            </div>
+            <div class="social-link" id="instagram">
+                <a href="https://www.instagram.com/honorsociety.aub?igsh=MWE5d2hmMmVqdG5zMA==" target="_blank">
+                    <img src="Images/instagram.png" alt="Instagram Page">
+                </a>
+            </div>
+            <div class="social-link" id="linkedin">
+                <a href="https://www.linkedin.com/company/aub-honor-society/" target="_blank">
+                    <img src="Images/linkedin.png" alt="Linkedin Page">
+                </a>
+            </div>
+        </div>
     </footer>
 
     <!-- JS for tabbed sections -->

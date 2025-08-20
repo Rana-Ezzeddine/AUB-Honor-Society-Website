@@ -145,3 +145,49 @@ footer {
     opacity: 1;
     transition: opacity 0.3s ease-out;
 }
+
+
+#social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 0;
+}
+
+.social-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+}
+
+.social-link img {
+    width: 23px;
+    height: 23px;
+}
+
+#email-link {
+    text-decoration: none;
+}
+
+#email-link p {
+    color: white;
+}
+
+#email-link p:hover {
+    color: #992426;
+}
+
+
+#instagram img:hover {
+    width: 23px;
+    height: 23px;
+    content: url('Images/instagram-clicked.png');  
+}
+
+#linkedin img:hover {
+    width: 23px;
+    height: 23px;
+    content: url('Images/linkedin-clicked.png');
+}
