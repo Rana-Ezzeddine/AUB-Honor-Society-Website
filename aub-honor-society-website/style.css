@@ -1,0 +1,147 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/*header*/
+header {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: #440c0f;
+    color: #f3e6d6;
+    gap: 50px;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo {
+    height: 120px;
+    width: auto;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 3rem;
+}
+
+/* Navigation */
+nav a {
+    color: #f3e6d6;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/*main content*/
+main {
+    flex: 1;
+}
+
+/*sections*/
+.tab-section {
+    display: none;
+    padding: 50px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.tab-section.active {
+    display: block;
+}
+
+h2 {
+    border-bottom: 2px solid #440c0f;
+    padding-bottom: 5px;
+}
+
+
+/*forms*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #440c0f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #f3e6d6;
+}
+
+/*footer*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.about-image {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.about-hero {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+}
+
+.about-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(50%);
+}
+
+.hero-title {
+    position: absolute;
+    font-weight: lighter;
+    top: 50px;
+    left: 50px;
+    color: #f3e6d6;
+    font-size: 4rem;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUB Honor Society</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--header-->
+    <header>
+        <div class="left-header">
+            <img src="logo.jpg" class="logo">
+            <h1 class="site-title">AUB Honor Society</h1>
+        </div>
+        <nav>
+            <a href="#" class="nav-link" data-section="about">About</a>
+            <a href="#" class="nav-link" data-section="events">Events</a>
+            <a href="#" class="nav-link" data-section="podcast">Podcast</a>
+            <a href="#" class="nav-link" data-section="networking">Networking</a>
+            <a href="#" class="nav-link" data-section="merchandise">Merchandise</a>
+            <a href="#" class="nav-link" data-section="faqs">FAQs</a>
+            <a href="#" class="nav-link" data-section="contact">Contact</a>
+        </nav>
+    </header>
+
+    <!--sections-->
+    <main>
+        <!--about-->
+         <section id="about" class="tab-section">
+    <div class="about-hero">
+        <img src="about-photo.jpg" alt="AUB Honor Society">
+        <h2 class="hero-title">About the Society</h2>
+    </div>
+
+    <div class="about-text">
+        <p>The AUB Honor Society recognizes exceptional academic achievement and leadership among AUB students.</p>
+        <h3>Membership</h3>
+        <p>Details about how to become a member...</p>
+        <h3>Eligibility</h3>
+        <p>Eligibility criteria...</p>
+    </div>
+</section>
+
+
+        <!--events & initiatives-->
+        <section id="events" class="tab-section">
+            <h2>Events & Initiatives</h2>
+            <h3>Upcoming</h3>
+            <ul>
+                <li>Event 1 - Date</li>
+                <li>Event 2 - Date</li>
+            </ul>
+            <h3>Past</h3>
+            <ul>
+                <li>Event 1 - Date</li>
+                <li>Event 2 - Date</li>
+            </ul>
+        </section>
+
+        <!--podcast-->
+        <section id="podcast" class="tab-section">
+            <h2>Podcast</h2>
+            <p>Listen to our episodes below:</p>
+        </section>
+
+        <!-- Networking & Outreach -->
+        <section id="networking" class="tab-section">
+            <h2>Networking & Outreach</h2>
+        </section>
+
+        <!--merchandise-->
+        <section id="merchandise" class="tab-section">
+            <h2>Merchandise</h2>
+        </section>
+
+        <!--FAQs-->
+        <section id="faqs" class="tab-section">
+            <h2>FAQs</h2>
+            <details>
+                <summary>How do I join?</summary>
+                <p>Membership details...</p>
+            </details>
+            <details>
+                <summary>Is there a fee?</summary>
+                <p>Fee information...</p>
+            </details>
+        </section>
+
+        <!-- Contact -->
+<section id="contact" class="tab-section">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> honorsociety@aub.edu.lb</p>
+    <p><strong>Phone:</strong> +961 1 350000</p>
+    <p><strong>Location:</strong> American University of Beirut, Beirut, Lebanon</p>
+    <p><strong>Social Media:</strong> 
+        <a href="https://www.instagram.com/aubhonorsociety" target="_blank">Instagram</a> | 
+        <a href="https://www.facebook.com/aubhonorsociety" target="_blank">Facebook</a>
+    </p>
+</section>
+
+    </main>
+
+    <!--footer-->
+    <footer>
+        <p>© 2025 AUB Honor Society</p>
+    </footer>
+
+    <!-- JS for tabbed sections -->
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.tab-section');
+
+        // Show first section by default
+        sections[0].classList.add('active');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = link.getAttribute('data-section');
+
+                sections.forEach(section => section.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
