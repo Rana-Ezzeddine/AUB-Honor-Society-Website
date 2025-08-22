@@ -20,6 +20,8 @@ let events = [
     { month: "SEP", month_NUM: 9, day: 10, start_time: "10:00 pm", end_time: "2:00 am", event_name: "The Office Trivia", img_link: "Images/imgforevent.jpeg"},
     { month: "SEP", month_NUM: 9, day: 5, start_time: "10:00 pm", end_time: "0", event_name: "The Office Trivia2", img_link: "Images/img2.jpeg"},
     { month: "MAY", month_NUM: 5, day: 3, start_time: "5:00 pm", end_time: "6:00 pm", event_name: "First Induction Ceremony", img_link: "Images/imgforevent.jpeg"},
+    { month: "DEC", month_NUM: 12, day: 5, start_time: "7:00 pm", end_time: "0", event_name: "The Office Trivia3", img_link: "Images/Newspaper.jpeg"},
+    { month: "MAR", month_NUM: 3, day: 3, start_time: "8:00 am", end_time: "6:00 pm", event_name: "First Induction Ceremony", img_link: "Images/teta.jpg"},
 ];
 
 
