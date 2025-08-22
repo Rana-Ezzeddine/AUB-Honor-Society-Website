@@ -4,6 +4,13 @@
   --font-stack: Arial, sans-serif;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 html, body {
     /* height: 100%; */
     margin: 0;
@@ -66,6 +73,7 @@ header {
     color: var(--gold-accent);
     gap: 50px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.9);
+    z-index: 10;
 }
 
 .left-header {
@@ -89,7 +97,7 @@ header {
 
 
 /* Navigation */
-nav a {
+nav a, .small-nav-menu-box a {
     color: var(--gold-accent);
     margin-left: 15px;
     text-decoration: none;
@@ -487,7 +495,7 @@ details[open] .faq-dropdown::after {
 
 .articles-background {
     min-height: 100%;
-    background-color:#e7e5e5;
+    /* background-color:#e7e5e5; */
     margin: 0;
     padding: 15px;
 
@@ -501,18 +509,185 @@ details[open] .faq-dropdown::after {
 }
 
 .article-list {
-    display:flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    gap: 20px;  
+    padding: 40px;
 }
 
 .article-box {
+    font-family: Arial, Courier, monospace;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-shadow: 2px solid #333 ;
+    gap: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+    width: 100%;
 }
 
+.article-img {
+    /* background-color: red; */
+    /* height: 300px; */
+    /* width: 400px; */
+    width: 100%;
+    aspect-ratio: 4 / 2.5;
+
+}
 .article-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.article-heading {
+    /* width: 800px; */
+    /* padding-left: 40px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    font-size: 25px;
+    font-weight: bold;
+    overflow-wrap: break-word; /* allows long words to break */
+    word-wrap: break-word;     /* legacy support */
+    word-break: break-word;    /* breaks at any character if necessary */
+    white-space: normal;       /* ensures text can wrap onto multiple lines */
+}
+
+.article-summary {
+    font-size: 20px;
+    /* width: 8    00px; */
+    overflow-wrap: break-word; /* allows long words to break */
+    word-wrap: break-word;     /* legacy support */
+    word-break: break-word;    /* breaks at any character if necessary */
+    white-space: normal;       /* ensures text can wrap onto multiple lines */
+    line-height: 2;
+}
+
+
+
+
+/* RESPONSIVENESS */
+
+.small-nav-menu-title {
+    display: none;
+}
+
+.small-nav-menu-box {
+    display: none;
+}
+
+
+/* THE MEDIA QUERIES */
+@media (max-width: 600px) {
+    .site-title {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        padding-left: 40px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.9);
+    }
+    .nav-link {
+        display: none;
+    }
+
+
+    .small-nav-menu-title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 30px;
+        height: 25px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-dash {
+        padding: 0;
+        margin: 0;
+        height: 3px;
+        width: 100%;
+        background-color: var(--gold-accent); /* color of bars */
+        border-radius: 2px;    
+}
+
+    .small-nav-menu-box {
+        display: block;
+        position: relative;
+        background-color: #992426;
+        
+        /* top: 100%;
+        left: 0; */
+        width: 100%;
+        max-height: 0;
+        transition: max-height 1s ease, box-shadow 0.5s ease;
+        /* opacity: 0; */
+        
+        margin: 0;
+        /* padding: 20px; */
+
+    }
+
+    .inner-small-nav-menu-box {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-link-small {
+        padding: 0px;
+        /* justify-self: center; */
+        width: auto;
+        transition: border-color 0.3s;     
+
+        border-bottom: 2px solid transparent; /* invisible line by default */
+        padding-bottom: 5px;          /* adds space between text and line */
+
+
+    }
+
+
+
+    .nav-link-small:hover {
+        border-bottom-color: #ffffff; /* line appears on hover */
+    }
+
+    .nav-link-small.active {
+        opacity: 1;
+    }
+
+    .small-nav-menu-box.active {
+        max-height: 500px;
+        opacity: 1;
+        /* transform: translateY(0); slide down into view */
+        pointer-events: auto;
+        box-shadow: 0px 2px 10px rgba(70, 61, 61, 0.5);   
+    }
+
+
+    .small-nav-menu-box.opening {
+        transition: max-height 1s ease;
+    }
+
+    .nav-link-small.opening {
+        transition: border-color 0.3s;
+    }
+
+    .small-nav-menu-title:hover{
+        filter: brightness(1.3);
+        transition: filter 0.3s ease;
+    }
+
+
 
 }
 

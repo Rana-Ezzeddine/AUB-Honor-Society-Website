@@ -1,6 +1,20 @@
+const toggleBtn = document.querySelector('.small-nav-menu-title');
+const menuBox = document.querySelector('.small-nav-menu-box');
+const menuText = document.querySelectorAll('.nav-link-small');
+
+toggleBtn.addEventListener('click', () => {
+    menuBox.classList.toggle('active');
+    menuBox.classList.toggle('opening');
+
+    menuText.forEach((element) => {
+        element.classList.toggle('active');
+        element.classList.toggle('opening')
+    });
+});
 
 
-    // Fill this array of 2-size arrays with all the FAQ questions and their answers
+
+// Fill this array of 2-size arrays with all the FAQ questions and their answers
     // Follow the format:
     // [" Add the Question Here",
     //      "Add the Answer here"],
