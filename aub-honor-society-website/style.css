@@ -438,3 +438,34 @@ details[open] .faq-dropdown::after {
     background: rgba(0, 0, 0, 0.25); /* shadow color */
     filter: blur(4px);       /* makes it soft */
 } 
+
+
+#merchandise {
+    color: darkred;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+.img-seperator-events {
+    width: 100%;
+    background-color: pink;
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.img-seperator-events img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.articles-background {
+    background-color:#d1d0d0;
+    margin: 0;
+    padding: 0;
+}
