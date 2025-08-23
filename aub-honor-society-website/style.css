@@ -525,6 +525,8 @@ details[open] .faq-dropdown::after {
 
     --titleFontSize: 30px;
     --summaryFontSize: 20px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .article-img {
@@ -555,8 +557,8 @@ details[open] .faq-dropdown::after {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+
+    color: rgb(100, 99, 99);
 }
 
 .pre-title-right {
@@ -568,15 +570,16 @@ details[open] .faq-dropdown::after {
 }
 
 .article-author {
-    font-size: var(--summaryFontSize);
+    font-size: 15px;
 }
 
 .article-time {
-    font-size: var(--summaryFontSize);
+    font-size: 15px;
+    font-family: "Courier New", monospace;
 }
 
 .article-category {
-    font-size: var(--summaryFontSize);
+    font-size: 15px;
 }
 .article-title {
     font-size: var(--titleFontSize);
@@ -610,16 +613,22 @@ details[open] .faq-dropdown::after {
     margin: 15px 0 0 0;
     font-size: 23px;
     font-weight: bold;
+
+    transition: background-color 0.5s ease-out;
+}
+
+.article-more:hover {
+    background-color: #77181d;
 }
 
 .article-category-selector {
     display: flex;
-    /* justify-content: center; */
+    justify-content: space-around;
     gap: 30px;
     border-bottom: 1px solid rgb(114, 114, 114);
     color: rgb(114, 114, 114);
-    text-align: left;
-    font-size: 20px;
+    text-align:center;
+    font-size: 30px;
 }
 
 .article-cat:hover {
@@ -635,6 +644,10 @@ details[open] .faq-dropdown::after {
     color: white;
     border-radius: 10px;
     padding: 10px;
+}
+
+.alumni-category:hover {
+    background-color: rgb(94, 94, 216);
 }
 
 /* RESPONSIVENESS */
