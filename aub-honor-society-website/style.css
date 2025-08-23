@@ -1,5 +1,5 @@
 :root {
-  --main-color: #440c0f;
+  --main-color: #420c0f;
   --gold-accent: #f8d081;  /* #c48b39; #f3e6d6; */
   --font-stack: Arial, sans-serif;
 }
@@ -69,11 +69,10 @@ header {
     align-items: center;
     /* padding: 5px 20px; */
     padding: 30px 70px 20px 70px;
-    background-color: #440c0f;
+    background-color: var(--main-color); /*#440c0f;*/
     color: var(--gold-accent);
     gap: 50px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.9);
-    z-index: 10;
 }
 
 .left-header {
@@ -511,7 +510,7 @@ details[open] .faq-dropdown::after {
 .article-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    gap: 20px;  
+    gap: 80px;  
     padding: 40px;
 }
 
@@ -520,10 +519,12 @@ details[open] .faq-dropdown::after {
     display: flex;
     flex-direction: column;
     box-shadow: 2px solid #333 ;
-    gap: 30px;
+    gap: 10px;
     padding-bottom: 50px;
-    border-bottom: 1px solid black;
     width: 100%;
+
+    --titleFontSize: 30px;
+    --summaryFontSize: 20px;
 }
 
 .article-img {
@@ -549,8 +550,36 @@ details[open] .faq-dropdown::after {
     margin-bottom: 20px;
 }
 
+.article-pre-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pre-title-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-left: 15px;
+}
+
+.article-author {
+    font-size: var(--summaryFontSize);
+}
+
+.article-time {
+    font-size: var(--summaryFontSize);
+}
+
+.article-category {
+    font-size: var(--summaryFontSize);
+}
 .article-title {
-    font-size: 25px;
+    font-size: var(--titleFontSize);
     font-weight: bold;
     overflow-wrap: break-word; /* allows long words to break */
     word-wrap: break-word;     /* legacy support */
@@ -559,7 +588,8 @@ details[open] .faq-dropdown::after {
 }
 
 .article-summary {
-    font-size: 20px;
+    font-size: var(--summaryFontSize);
+    color: rgb(131, 131, 131);
     /* width: 8    00px; */
     overflow-wrap: break-word; /* allows long words to break */
     word-wrap: break-word;     /* legacy support */
@@ -568,8 +598,44 @@ details[open] .faq-dropdown::after {
     line-height: 2;
 }
 
+.article-more {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    aspect-ratio: 6/1;
+    background-color: var(--main-color);
+    color: var(--gold-accent);
+    padding: 15px 30px 15px 30px;
+    margin: 15px 0 0 0;
+    font-size: 23px;
+    font-weight: bold;
+}
 
+.article-category-selector {
+    display: flex;
+    /* justify-content: center; */
+    gap: 30px;
+    border-bottom: 1px solid rgb(114, 114, 114);
+    color: rgb(114, 114, 114);
+    text-align: left;
+    font-size: 20px;
+}
 
+.article-cat:hover {
+    color: black;
+    font-weight: bold;
+}
+
+/*ADD CODE THAT WHICHEVER CATEGORY IS ACTIVE, BTKOUN L BOLD ONE*/
+/* SOME CATEGORY CSS PREPPED */
+
+.alumni-category {
+    background-color: rgb(64, 64, 224);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
 
 /* RESPONSIVENESS */
 
