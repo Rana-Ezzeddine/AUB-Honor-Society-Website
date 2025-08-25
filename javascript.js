@@ -190,3 +190,29 @@ function fillUpcomingEvents() {
 
 }
 
+/*ABOUT----------------------------------------------------- */
+document.addEventListener("DOMContentLoaded", () => {
+  const paragraphs = document.querySelectorAll("#about p");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, { threshold: 1 });
+
+  paragraphs.forEach(p => {
+    observer.observe(p);
+  });
+});
+
+/*PODCAST--------------------------------------------------- */
+
+document.querySelector('.watch-btn').addEventListener('click', function(e){
+  e.preventDefault(); // prevent default anchor jump
+
+  const episodesSection = document.getElementById('episodes');
+  episodesSection.scrollIntoView({ behavior: 'smooth' });
+});
