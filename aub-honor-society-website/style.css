@@ -202,7 +202,7 @@ form button:hover {
     margin-bottom: 30px;
     /* margin-right: 10px; */
 }
-
+/* 
 #about {
     min-height: 0;
     margin-top: 0;
@@ -239,6 +239,258 @@ form button:hover {
     font-size: 4rem;
     opacity: 1;
     transition: opacity 0.3s ease-out;
+} */
+
+/* MN HON HER CSS FOR ABOUT*/
+
+#about {
+    min-height: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+.about-text {
+    position: absolute;
+    font-weight: lighter;
+    bottom: 200px;
+    left: 650px;
+    right: 70px;
+    color:  #f3e6d6;
+    font-size: 22px;
+    line-height: 1.5;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+    text-align: center;
+
+}
+
+.about-hero {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%); 
+    overflow: hidden;
+}
+
+.about-hero img {
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    display: block;
+    filter: brightness(40%);
+}
+
+.hero-title {
+    position: absolute;
+    font-weight: lighter;
+    bottom: 300px;
+    left: 70px;
+    color: var(--gold-accent);
+    font-size: 4rem;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;         /* space between title and card */
+  margin-top: 50px;
+  margin-right: 0px;
+  margin-left: 90px;
+  max-width: 1200px;  /* container width */
+  flex-wrap: wrap;    /* responsive */
+}
+
+
+.info-block h4,
+.info-block h5 {
+  font-size: 40px;
+  color: #800000;
+  text-align: center;
+
+}
+
+
+.info-block div {
+  flex: 1;      
+  min-width: 0;
+  margin: 0;
+  margin-right: 0;
+}
+
+/* Paragraph animation */
+#about p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  font-size: 22px; 
+  line-height: 1.5;
+  font-weight: lighter;
+  margin: 0 0 10px 0;  /* spacing between paragraphs */
+}
+
+
+#about p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.info-block div.card {
+  flex: 1 1 50%;               /* take remaining space equally */
+  min-width: 0;              /* allow flexbox to shrink properly */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  overflow: visible;         /* no truncation */
+  white-space: normal;       /* normal wrapping inside card */
+}
+
+/* Optional hover effect */
+.card:hover {
+  transform: translateY(-5px);           /* float up slightly */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* stronger shadow */
+}
+
+
+/* PODCAST CSS*/
+
+
+#podcast {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+}
+
+/* Hero */
+#podcast .podcast-hero {
+  position: relative;
+  height: 100vh;         /* full screen */
+  overflow: hidden;
+}
+
+#podcast .hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* fills the screen without distortion */
+}
+
+/* Slight dark overlay for readability */
+#podcast .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.35) 40%,
+    rgba(0,0,0,0.25) 100%
+  );
+}
+
+/* Title on top (centered horizontally) + intro below it, both on the image */
+#podcast .hero-content {
+  position: absolute;
+  top: 8vh;              /* pushes content near the top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(90%, 900px);
+  text-align: center;
+  color: var(--gold-accent);
+}
+
+#podcast .hero-content h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: 0.5px;
+  margin: 0 0 0.6rem 0;
+  font-weight: 700;
+    opacity: 0.95;
+
+}
+
+#podcast .hero-content p {
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+
+
+/* Episodes */
+#podcast .episodes {
+  background: #f9f9f9;
+  padding: 3.5rem 1.25rem;
+  text-align: center;
+}
+
+#podcast .episodes h2 {
+  font-size: 40px;
+  margin-bottom: 2rem;
+  margin-top: 0px;
+  color: #800000;
+}
+
+#podcast .episode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ .episode {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+ .episode iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: 315px; /* fallback so it shows even if aspect-ratio isn't supported */
+  display: block;
+  border: 0;
+}
+
+
+/* Hover label slides up under the video */
+ .episode-info {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  transform: translateY(100%);
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  font-size: 0.98rem;
+  transition: transform 0.35s ease;
+}
+
+ .episode:hover .episode-info {
+  transform: translateY(0);
+}
+
+ .watch-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #800000; /* change color as needed */
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#podcast .watch-btn:hover {
+  background-color: #800000;
+  transform: translateY(-2px);
+}
+html {
+  scroll-behavior: smooth;
 }
 
 

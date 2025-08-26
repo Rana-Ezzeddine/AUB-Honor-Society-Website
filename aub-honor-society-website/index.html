@@ -50,20 +50,42 @@
     <!--sections-->
     <main>
         <!--about-->
-         <section id="about" class="tab-section">
+        <section id="about" class="tab-section">
             <div class="about-hero">
                 <img src="Images/about-photo.jpg" alt="AUB Honor Society">
                 <h2 class="hero-title">About the Society</h2>
+                <div class="about-text">
+                <p>The AUB Honor Society stands as a testament to the American University of Beirut's unwavering commitment to academic excellence, leadership, and community service.</p>
+                <p>Established to recognize and celebrate students who exemplify these core values, the society fosters a culture of integrity, scholarly achievement, and civic responsibility.</p>
+                <p>Through various initiatives, the society aims to inspire members to contribute meaningfully to both the university and the broader community.</p>
+                </div>
             </div>
 
-            <div class="about-text">
-                <p>The AUB Honor Society recognizes exceptional academic achievement and leadership among AUB students.</p>
-                <h3>Membership</h3>
-                <p>Details about how to become a member...</p>
-                <h3>Eligibility</h3>
-                <p>Eligibility criteria...</p>     
+            <!-- Eligibility -->
+            <div class="info-block">
+            <div class="eligibility-title">
+                <h4>Eligibility Criteria</h4>
+            </div>
+            <div class="eligibility-text card">
+                <p><strong>Academic Excellence:</strong> Students must maintain a high GPA, typically within the top percentile of their class, reflecting consistent scholarly achievement.</p>
+                <p><strong>Leadership Qualities:</strong> Active participation in extracurricular activities, student organizations, or community service projects that showcase leadership and initiative.</p>
+                <p><strong>Adherence to AUB's Code of Conduct:</strong> Demonstrating integrity, responsibility, and respect within the university community.</p>
+            </div>
+            </div>
+
+            <div class="info-block">
+            <div class="membership-title">
+                <h5>Membership Benefits</h5>
+            </div>
+            <div class="membership-text card">
+                <p><strong>Recognition:</strong> Official acknowledgment during university ceremonies and events. </p>
+                <p><strong>Networking Opportunities:</strong> Access to a network of distinguished alumni and professionals.</p>
+                <p><strong>Leadership Development:</strong> Opportunities to engage in leadership roles within the society and university. </p>
+                <p><strong>Career Advancement:</strong> Enhanced prospects through the society's connections and resources.</p>
+            </div>
             </div>
         </section>
+
 
 
         <!--events & initiatives-->
@@ -102,10 +124,67 @@
         </section>
 
         <!--podcast-->
+
+
+<!--podcast-->
+        <!-- ================= Podcast Section ================= -->
         <section id="podcast" class="tab-section">
-            <h2>Podcast</h2>
-            <p>Listen to our episodes below:</p>
-            <p>Test Test</p>
+                    <!-- Hero with actual IMG element -->
+            <div class="podcast-hero">
+                <!-- CHANGE THIS PATH to your image -->
+                <img class="hero-img" src="Images/your-image.jpg" />
+                <div class="hero-overlay"></div>
+
+                <!-- Title at the top + intro on the image -->
+                <div class="hero-content">
+                    <h1 class="reveal">Our Podcast</h1>
+                    <p class="reveal delay">
+                        Welcome to the AUB Honor Society Podcast — conversations with students,
+                        alumni, and faculty spotlighting leadership, learning, and impact.
+                    </p>
+                        <a href="#episodes" class="watch-btn reveal delay">Watch Now</a>
+
+                </div>
+            </div>
+
+        <!-- Episodes -->
+            <div class="episodes" id="episodes">
+                <h2>Episodes</h2>
+                <div class="episode-grid">
+                <div class="episode reveal">
+                    <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Episode 1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    ></iframe>
+                    <div class="episode-info">Episode 1 — Introduction</div>
+                </div>
+
+                <div class="episode reveal">
+                    <iframe   
+                    src="https://www.youtube.com/embed/7CGKeID7nRc?si=2Y1iXrHWum31niUa"
+                    title="Episode 2"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    ></iframe>
+                    <div class="episode-info">Episode 2 — Leadership at AUB</div>
+                </div>
+
+                <div class="episode reveal">
+                    <iframe
+                    src="https://www.youtube.com/embed/oHg5SJYRHA0"
+                    title="Episode 3"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    ></iframe>
+                    <div class="episode-info">Episode 3 — Student Achievements</div>
+                </div>
+                </div>
+            </div>
         </section>
 
         <!-- Networking & Outreach -->

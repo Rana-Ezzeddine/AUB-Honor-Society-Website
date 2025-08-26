@@ -1,3 +1,31 @@
+
+//about page
+document.addEventListener("DOMContentLoaded", () => {
+  const paragraphs = document.querySelectorAll("#about p");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, { threshold: 1 });
+
+  paragraphs.forEach(p => {
+    observer.observe(p);
+  });
+});
+
+document.querySelector('.watch-btn').addEventListener('click', function(e){
+  e.preventDefault(); // prevent default anchor jump
+
+  const episodesSection = document.getElementById('episodes');
+  episodesSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+
+
 const toggleBtn = document.querySelector('.small-nav-menu-title');
 const menuBox = document.querySelector('.small-nav-menu-box');
 const menuText = document.querySelectorAll('.nav-link-small');
@@ -11,6 +39,7 @@ toggleBtn.addEventListener('click', () => {
         element.classList.toggle('opening')
     });
 });
+
 
 
 
